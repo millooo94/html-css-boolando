@@ -7,3 +7,98 @@
 html {
     font-family: 'Roboto', sans-serif;
 }
+
+
+
+header {
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    background-color: orange;
+    flex-wrap: nowrap;
+}
+
+
+.header-icon {
+    max-width: 100px;
+
+}
+
+.header-text-block {
+    width: 200px;
+}
+
+.header-icon-block {
+    width: 100px;
+}
+
+
+main {
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    padding: 40px;
+}
+
+.card {
+    width: 15vw;
+}
+
+
+
+
+
+
+.card-pic {
+    width: 100%;
+
+    margin-top: 50px;
+}
+
+
+
+.sales-text {
+    display: inline-block;
+    padding: 10px;
+    background-color: red;
+    color: white;
+}
+
+.eco-text {
+    display: inline-block;
+    padding: 10px;
+    background-color: green;
+    color: white;
+}
+
+.brand {
+    display: block;
+}
+
+.model-text {
+    display: block;
+}
+
+.price-text {
+    display: inline-block;
+}
+
+.discounted-price-text {
+    display: inline-block;
+}
+
+.heart {
+    display: inline-block;
+    color: red;
+
+}
+
+
+
+
+
+
+
