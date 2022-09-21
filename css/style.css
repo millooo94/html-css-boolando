@@ -40,11 +40,17 @@ main {
     width: 100vw;
     display: flex;
     flex-direction: row;
-    padding: 40px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 3.5rem 10rem 3.5rem 10rem;
 }
 
 .card {
-    width: 15vw;
+    width: calc(33.3% - 2rem);
+    position: relative;
+    z-index: -1;
 }
 
 
@@ -57,6 +63,19 @@ main {
 
     margin-top: 50px;
 }
+
+
+.card-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sales {
+    position: absolute;
+    bottom: 15%;
+}
+
+
 
 
 
@@ -90,14 +109,18 @@ main {
     display: inline-block;
 }
 
-.heart {
-    display: inline-block;
-    color: red;
+.heart-container {
 
 }
 
-
-
+.heart {
+    position: absolute;
+    bottom: 83.5%;
+    right: 0;
+    background-color: white;
+    padding: 0.6em;
+    /* display: inline-block; */
+}
 
 
 
