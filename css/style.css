@@ -12,39 +12,41 @@ html {
 
 header {
     width: 100%;
-    position: fixed;
     display: flex;
-    justify-content: space-around;
-    padding-top: 1em;
-    padding-bottom: 1em;
-    background-color: orange;
-    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ff6900;
+    padding: 1.1rem 8rem 1.1rem 8rem;
+    position: fixed;
+}
+
+.header-text-block a {
+    margin-right: 0.2em;
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: white;
+
+}
+
+.logo {
+    width: 7rem;
+    vertical-align: bottom;
+
 }
 
 
-.header-icon {
-    max-width: 100px;
-
-}
-
-.header-text-block {
-    width: 200px;
-}
-
-.header-icon-block {
-    width: 100px;
-}
 
 
 main {
     width: 100vw;
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     gap: 15px;
-    padding: 3.5rem 10rem 3.5rem 10rem;
+    padding: 6rem 8rem 6rem 8rem;
 }
 
 .card {
@@ -61,7 +63,15 @@ main {
 .card-pic {
     width: 100%;
 
-    margin-top: 50px;
+    /* margin-top: 50px; */
+}
+
+
+.card-pic.under {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
 }
 
 
@@ -72,7 +82,7 @@ main {
 
 .sales {
     position: absolute;
-    bottom: 15%;
+    top: 78.5%;
 }
 
 
@@ -81,47 +91,99 @@ main {
 
 .sales-text {
     display: inline-block;
-    padding: 10px;
+    padding: 0.4em 1.1em;
     background-color: red;
     color: white;
+    font-size: 0.6rem;
+    font-weight: 800;
 }
 
 .eco-text {
     display: inline-block;
-    padding: 10px;
+    padding: 0.4em 1.1em;
+    font-size: 0.6rem;
+    font-weight: 800;
     background-color: green;
     color: white;
 }
 
-.brand {
+.brand-text {
     display: block;
+    font-size: 0.8rem;
 }
 
 .model-text {
     display: block;
+    font-weight: 500;
 }
 
 .price-text {
     display: inline-block;
+    font-size: 0.8rem;
+    font-weight:500;
+    color: red;
+    
 }
 
 .discounted-price-text {
     display: inline-block;
+    font-size: 0.8rem;
+    text-decoration:line-through;
 }
 
-.heart-container {
-
-}
 
 .heart {
+    display: block;
     position: absolute;
-    bottom: 83.5%;
+    top: 2%;
     right: 0;
     background-color: white;
-    padding: 0.6em;
-    /* display: inline-block; */
+    font-size: 1.2em;
+    padding: 0.5em;
+
+
 }
 
 
+footer {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    padding: 1.3rem 8rem;
+}
+
+.name-company {
+    font-size: 1rem;
+    font-weight: 600;
+    display: block;
+    color: white;
+}
+
+.name-company-links {
+    display: inline-block;
+    margin-top: 0.5em;
+    font-size: 0.7rem;
+    text-decoration: none;
+    color: white;
+}
+
+.footer-social {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: white;
+}
 
 
+.social-logo {
+    color: white;
+}
+
+.over:hover {
+    display: none;
+}
+
+
+.card-content i:hover {
+    color: red
+}
