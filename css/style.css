@@ -8,17 +8,23 @@ html {
     font-family: 'Roboto', sans-serif;
 }
 
+body {
+    overflow-x: hidden;
+}
+
 
 
 header {
-    width: 100%;
+    width: 100vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #ff6900;
     padding: 1.1rem 8rem 1.1rem 8rem;
     position: fixed;
+    box-shadow: 10px 0px 10px black;
 }
+
 
 .header-text-block a {
     margin-right: 0.2em;
@@ -26,15 +32,18 @@ header {
     font-size: 0.85rem;
     font-weight: 700;
     color: white;
-
 }
 
 .logo {
     width: 7rem;
     vertical-align: bottom;
-
 }
 
+.header-icon {
+    font-size: 0.9em;
+    color: white;
+    margin-left: 0.2em;
+}
 
 
 
@@ -56,14 +65,13 @@ main {
 }
 
 
-
-
-
-
 .card-pic {
     width: 100%;
+}
 
-    /* margin-top: 50px; */
+.card-pic.over {
+    z-index: 0;
+    
 }
 
 
@@ -72,6 +80,7 @@ main {
     right: 0;
     top: 0;
     z-index: -1;
+    
 }
 
 
@@ -146,8 +155,10 @@ main {
 
 
 footer {
+    width: 100vw;
     display: flex;
     justify-content: space-between;
+    align-items: center;
     background-color: black;
     padding: 1.3rem 8rem;
 }
@@ -174,16 +185,21 @@ footer {
     color: white;
 }
 
+.footer-icon-block {
+    margin-top: 0.4em;
+}
 
-.social-logo {
+.footer-icon {
+    font-size: 0.9em;
+    margin-right: 0.1em;
     color: white;
 }
 
-.over:hover {
-    display: none;
-}
 
 
-.card-content i:hover {
+
+
+.heart:hover {
     color: red
 }
+
