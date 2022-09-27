@@ -14,8 +14,11 @@ body {
 
 
 
+/* Header */
+
 header {
-    width: 100vw;
+    width: 100%;
+    height: 4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -23,8 +26,8 @@ header {
     padding: 1.1rem 8rem 1.1rem 8rem;
     position: fixed;
     box-shadow: 10px 0px 10px black;
+    z-index: 10;
 }
-
 
 .header-text-block a {
     margin-right: 0.2em;
@@ -46,57 +49,79 @@ header {
 }
 
 
+/* Corpo della pagina */
 
-main {
-    width: 100vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 15px;
-    padding: 6rem 8rem 6rem 8rem;
+.main {
+    padding-top: 4rem;
 }
+
+.clearfix::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+
+.container {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+main .container {
+    padding-top: 6.5rem;
+} 
 
 .card {
-    width: calc(33.3% - 2rem);
-    position: relative;
-    z-index: -1;
+	width: calc((100% - 2rem) / 3);
+	min-width: 200px;
+	float: left;
+	margin-bottom: 2rem;
 }
 
-
-.card-pic {
-    width: 100%;
+.card:nth-child(3n+2) {
+	margin-right: 1rem;
+	margin-left: 1rem;
 }
 
-.card-pic.over {
-    z-index: 0;
-    
+.card .top-content {
+	position: relative;
 }
 
-
-.card-pic.under {
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: -1;
-    
+.card img {
+	width: 100%;
 }
 
-
-.card-content {
-    display: flex;
-    justify-content: space-between;
+.card .img-positioned {
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
-.sales {
-    position: absolute;
-    top: 78.5%;
+.card:hover {
+	cursor: pointer;
 }
 
+.card:hover .img-positioned {
+	visibility: hidden;
+}
 
+.card .heart {
+	position: absolute;
+	top: 1.5rem;
+	right: 0;
+	background-color: white;
+	width: 2.5rem;
+	height: 2.5rem;
+	text-align: center;
+	line-height: 2.5rem;
+	font-size: 2rem;
+}
 
-
+.card .tags-container {
+	position: absolute;
+	bottom: 1.5rem;
+	left: 0;
+	font-size: 0; 
+}
 
 .sales-text {
     display: inline-block;
@@ -118,41 +143,35 @@ main {
 
 .brand-text {
     display: block;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
 }
 
 .model-text {
     display: block;
-    font-weight: 500;
+    font-size: .8em;
+    font-weight: 700;
 }
 
 .price-text {
     display: inline-block;
-    font-size: 0.8rem;
-    font-weight:500;
-    color: red;
-    
+    font-size: .7rem;
+    font-family: 700;
+    text-decoration:line-through;    
 }
 
 .discounted-price-text {
     display: inline-block;
-    font-size: 0.8rem;
-    text-decoration:line-through;
+    font-size: .7rem;
+    font-weight: 800;
+    color: red;
+}
+
+.price-text {
+    margin-top: -1em;
 }
 
 
-.heart {
-    display: block;
-    position: absolute;
-    top: 2%;
-    right: 0;
-    background-color: white;
-    font-size: 1.2em;
-    padding: 0.5em;
-
-
-}
-
+/* Footer */
 
 footer {
     width: 100vw;
@@ -195,11 +214,10 @@ footer {
     color: white;
 }
 
-
-
-
+.card-pic.under:hover {
+    display: none;
+}
 
 .heart:hover {
     color: red
 }
-
